@@ -1,2 +1,0 @@
-vbell off                       # Turns visual bell off
-bindkey "^k" eval "copy" "stuff 11k"    # enter copy mode and move up one line
