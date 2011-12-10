@@ -3,13 +3,13 @@ def run_cucumber
   print "          "
   system "date '+%H:%M:%S'"
   puts "==================================="
-  system "cucumber --drb features/ --tags ~@skip"
+  system "cucumber --drb features/"
 end
 
 [
 "features/[^']*/[^']+_steps\.rb",
-"features/[^']+\.feature",
-"app/[^']*/[^']+\.rb"
+#"app/[^']*/[^']+\.rb",
+"features/[^']+\.feature"
 ].each do |file|
   watch(file) { run_cucumber }
 end
