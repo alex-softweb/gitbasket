@@ -21,7 +21,8 @@ vmap <c-l> :s/^\W\W//<cr>
 map <Space> i<Space><Esc>
 map <Tab> i<c-t><Esc>
 map <c-f> :R
-nmap <c-y> :b 
+map <c-y> :b 
+map <c-u> :noautocmd vimgrep /
 "map <C-f> :FuzzyFinderBuffer<CR>
 "map <C-a> :FuzzyFinderFile<CR>
 nmap <c-a> gt
