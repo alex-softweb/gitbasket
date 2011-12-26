@@ -21,7 +21,7 @@ vmap <c-l> :s/^\W\W//<cr>
 map <Space> i<Space><Esc>
 map <Tab> i<c-t><Esc>
 map <c-f> :R
-map <c-y> :b 
+nmap <c-y> :b 
 map <c-u> :noautocmd vimgrep /
 "map <C-f> :FuzzyFinderBuffer<CR>
 "map <C-a> :FuzzyFinderFile<CR>
@@ -42,4 +42,5 @@ map <C-d> :sh<CR>
 set nobackup
 set nowritebackup
 set noswapfile
-
+vmap <Tab> :s/^/  /<cr>
+vmap <C-t> :s/^  //<cr>      
