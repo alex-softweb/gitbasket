@@ -1,7 +1,0 @@
-.comANS{:id => "#{snippet.id}"}
-  - description = snippet.description.gsub(/\n/, '<br>').html_safe
-  .small
-    = render 'snippets/snippt', snippet: snippet, description: limit(description, 500), large: false
-  - if description.size > 500 
-    .large
-      = render 'snippets/snippt', snippet: snippet, description: description, large: true
