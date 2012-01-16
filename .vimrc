@@ -12,12 +12,8 @@ vmap <C-x> "+x
 map <C-v> "+gP
 nnoremap <insert> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p 
 vnoremap <c-y> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR> 
-vmap <c-g> :s/^/
-vmap <s-h> :s/^/#/<cr>
-map <s-h> :s/^/#/<cr>
-vmap <s-k> :s/^/\/\/<cr>
-map <s-l> :s/^\W//<CR>
-vmap <c-l> :s/^\W\W//<cr>
+map <c-h> <c-_><c-_>
+vmap <c-l> <c-_><space>//<cr>
 map <Space> i<Space><Esc>
 map <Tab> i<c-t><Esc>
 map <c-f> :R
@@ -43,5 +39,3 @@ map <C-d> :sh<CR>
 set nobackup
 set nowritebackup
 set noswapfile
-vmap <Tab> :s/^/  /<cr>
-vmap <C-t> :s/^  //<cr>      

@@ -1,0 +1,33 @@
+= hidden_field_tag :t_id, snippet.topic.id
+= hidden_field_tag "snippet", snippet.id
+.row1
+  = image_tag snippet.mood.image
+  %i= snippet.user_type
+  .width470
+    - if snippet_read_check(snippet.id)
+      = description
+    - else
+      %b
+        = description
+.row2
+  .col1
+    - if description.size > 500
+      - if large
+        .see_less
+          = link_to '-', 'javascript:'
+      - else
+        .see_more
+          = link_to '+', 'javascript:'
+    .editx
+      - if (Time.now - snippet.created_at) < 20000
+        - if snippet.user_id == current_user.id
+          = link_to 'x', snippet_path(snippet, topic_id: snippet.topic.id), confirm: "Are you sure?", method: :delete, remote: true
+          = link_to 'edit', edit_snippet_path(snippet, topic_id: snippet.topic.id), remote: true
+          (
+          = (5 - (Time.now - snippet.created_at)/60).round(2)
+          min)&nbsp
+  .col3
+    = render 'partial/rated_snippet', snippet: snippet
+    
+  
+  
