@@ -12,17 +12,19 @@ vmap <C-x> "+x
 map <C-v> "+gP
 nnoremap <insert> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p 
 vnoremap <c-y> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR> 
-map <c-h> <c-_><c-_>
-vmap <c-l> <c-_><space>//<cr>
+map H <c-_><c-_>
+map <c-h> <c-_><space>#<cr>
+map <c-l> <c-_><space>//<cr>
+map L <c-_><space>
 map <Space> i<Space><Esc>
 map <Tab> i<c-t><Esc>
 map <c-f> :R
-nmap <c-y> :b 
+"nmap <c-y> :b 
 map <c-u> :noautocmd vimgrep /
-"map <C-f> :FuzzyFinderBuffer<CR>
+nmap <C-y> :FuzzyFinderBuffer<CR>
 "map <C-a> :FuzzyFinderFile<CR>
 nmap <c-a> gt
-nmap <c-t> :tabe<cr>
+nmap <c-t> :ls<cr>
 map <F2> :NERDTreeToggle<CR>
 set tabstop=2
 set shiftwidth=2
@@ -39,3 +41,4 @@ map <C-d> :sh<CR>
 set nobackup
 set nowritebackup
 set noswapfile
+highlight Pmenu ctermfg=22 ctermbg=black
