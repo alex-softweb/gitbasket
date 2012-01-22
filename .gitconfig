@@ -1,0 +1,8 @@
+[user]
+	name = Alex Johnson
+	email = zerg4chat@gmail.com
+[alias]
+  l = log --oneline
+  df = diff --name-status
+[core]
+	editor = vim
