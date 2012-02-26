@@ -40,3 +40,4 @@ set nobackup
 set nowritebackup
 set noswapfile
 nmap <C-d> :bdelete
+highlight Pmenu ctermfg=22 ctermbg=black
