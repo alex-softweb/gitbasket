@@ -1,6 +1,3 @@
-call pathogen#infect()
-syntax on
-filetype plugin indent on
 colorscheme dark-ruby 
 map <CR> O<Esc>
 map <c-o> o<Esc>
@@ -41,3 +38,7 @@ set nowritebackup
 set noswapfile
 nmap <C-d> :bdelete
 highlight Pmenu ctermfg=22 ctermbg=black
+map t :set hlsearch!<cr>
+let g:lasttab = 1
+nmap <c-a> :exe "tabn" .g:lasttab <CR>
+au TabLeave * let g:lasttab = tabpagenr()

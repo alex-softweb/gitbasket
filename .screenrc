@@ -5,7 +5,7 @@ bind z  # unbind suspend
 bind d  # unbind detach
 
 # rebind kill
-bind K  
+bind k  
 bind Q kill
 
 # meta invokes command (^a)
