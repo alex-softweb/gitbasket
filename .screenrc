@@ -1,0 +1,18 @@
+# copy mode mappings can only be done with bindkey
+bindkey ^k eval copy "stuff ?"  
+bindkey ^p eval copy "stuff ?Param"
+vbell off                       # Turns visual bell off
+bind z  # unbind suspend
+bind d  # unbind detach
+
+# rebind kill
+bind k  
+bind Q kill
+
+# meta invokes command (^a)
+bind r eval meta colon "stuff 'source ~/.screenrc'"
+bind . eval meta colon "stuff 'number '"
+
+# rebind rename tab
+bind A
+bind , title
