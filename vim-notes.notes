@@ -1,0 +1,72 @@
+vim-notes
+
+→ help notes-insert-mode-mappings
+
+→ |:NoteFromSelectedText|
+  '\en' '\sn' '\tn'
+
+# separator
+  asterisk when pressed thrice in quick succession results in
+                                     * * *
+   change output with {{{vim let g:notes_ruler_text}}}
+
+# highlight variables
+
+ *notesName notesTagName notesTitle 
+ notesItalic notesBold notesBlockQuote
+ notesListBullet notesListNumber
+ notesTodo notesDoneMarker notesDoneItem notesXXX notesFixMe 
+ notesShortHeading notesAtxHeading 
+ notesDoubleQuoted notesSingleQuoted
+ notesRealURL notesTextURL notesEmailAddr 
+ notesUnixPath notesWindowsPath* 
+ *notesVimCmd* - Vim commands, words preceded by an ':' character
+ *notesRule* - lines containing only whitespace and '* * *'
+ *notesCodeStart notesCodeEnd* - the '{{{ }}}' markers
+
+# tags
+  @one  @two @three
+  • :SearchNotes without arguments searches the word under cursor. Tags defined with "@" prefix are also searchable.
+  • Inside a note’s *Insert* mode, typing "@" triggers autocompletion for tags which are saved in a text file. 
+    • Update tags list with :IndexTaggedNotes
+
+# Headings
+
+  Non folded heading should have less than 60 characters, *Start* with Capital Alphabet and *end* with a :
+   Like this one:
+
+# Inline formatting
+
+Text styles:
+ • _italic text_
+ • *bold text*
+
+Hyper links and such:
+ • Hyper links: http://www.vim.org/, sftp://server/file
+ • Domain names: www.python.org
+ • E-mail addresses: user@host.ext
+ • UNIX filenames: ~/relative/to/home, /absolute/path
+
+# Lists
+
+Bulleted lists can be used for to-do lists:
+ • DONE to-do conventions can appear anywhere in the bullet point
+ • XXX indicates importance
+
+Numbered lists are also supported:
+ 1. And You can
+ 2) use any type
+ 3/ of marker
+
+# Block quotes
+
+> Quotes are written using
+> the convention from e-mail
+
+# Embedded syntax highlighting
+{{{ruby
+  if “ruby”
+    do “follow default colorscheme syntax highlighting”
+    end
+  end
+}}}
